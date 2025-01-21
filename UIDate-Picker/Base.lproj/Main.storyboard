@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIDate_Picker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="btG-tN-4lJ">
+                                <rect key="frame" x="16" y="113" width="361" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="9P0-HB-zSZ"/>
+                                    <constraint firstAttribute="width" constant="361" id="zXR-6A-BsI"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Wheels"/>
+                                </segments>
+                                <connections>
+                                    <action selector="btnSegTapp:" destination="BYZ-38-t0r" eventType="valueChanged" id="tcV-6h-0r0"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEI-o6-Cqz">
+                                <rect key="frame" x="11.666666666666657" y="649" width="370" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="370" id="0vK-sb-8jQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="rMj-g9-DVI">
+                                <rect key="frame" x="16" y="174" width="332" height="366"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="366" id="8Lk-PF-s5e"/>
+                                    <constraint firstAttribute="width" constant="332" id="qsK-QO-w6H"/>
+                                </constraints>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rMj-g9-DVI" firstAttribute="top" secondItem="btG-tN-4lJ" secondAttribute="bottom" constant="-9" id="4Hg-ec-OfH"/>
+                            <constraint firstItem="HEI-o6-Cqz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Og-07-3xt"/>
+                            <constraint firstItem="btG-tN-4lJ" firstAttribute="leading" secondItem="rMj-g9-DVI" secondAttribute="leading" id="Lth-GL-ECx"/>
+                            <constraint firstItem="btG-tN-4lJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53.999999999977717" id="Nuh-Lz-PQZ"/>
+                            <constraint firstItem="rMj-g9-DVI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cOf-aZ-Gz6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="btG-tN-4lJ" secondAttribute="trailing" constant="16" id="fmf-9K-jWy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rMj-g9-DVI" secondAttribute="trailing" constant="29" id="joL-I5-CGI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HEI-o6-Cqz" secondAttribute="bottom" constant="148" id="lQ3-XS-amv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="rMj-g9-DVI" id="zy2-MC-I8A"/>
+                        <outlet property="labelDate" destination="HEI-o6-Cqz" id="KDZ-oN-39a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
